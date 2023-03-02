@@ -145,6 +145,12 @@ async def on_reaction_add(reaction, user):
         file_path = './temp_log.txt'
         file = discord.File(file_path)
         await log_channel.send(file=file)
+                
+        # send the log to the user who created the ticket
+        dm_channel = await user.create_dm()
+        file = discord.File(file_path)
+        await dm_channel.send('Here is the log of your ticket:', file=file)
+        
         
         await channel.delete()
 
