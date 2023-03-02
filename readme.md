@@ -11,7 +11,7 @@ This bot will help you manage tickets during CTF (Capture The Flag) events.
 <img src="img/private_ticket.png" width="600" height="350">
 
 
-3\) When the user reacts with the "close ticket" emoji, the private channel will be removed and the ticket log is sent in the log channel (in this case the channel is named "log_channel").
+3\) When the user reacts with the "close ticket" emoji, the private channel will be removed and the ticket log is sent to the log channel and to the ticket owner (in this case the channel is named "log_channel").  
 <img src="img/close_ticket.png" width="600" height="325">  
 <img src="img/ticket_log.png" width="800" height="300">
 
@@ -36,7 +36,7 @@ DISCORD_TOKEN='<TOKEN_SAVED_FROM_BEFORE>'
 
 ### 3. Configure the bot messages
 Choose how many challenge categories you want. In this case there are 7 categories: crypto, web, network, reverse, binary, osint and hardware. Select one emoji for each category and edit them accordingly.  
-IMPORTANT: you need to have different roles for each category. In order to create roles go to "server settings", "roles", "create role". In this case, the server has 7 roles and each role is assigned to different people.  
+IMPORTANT: you need to have different roles for each category. Every time that a ticket is created, it is assigned to the corresponding role. For example, if a 'crypto' ticket is created, it is assigned to the 'crypto' role and the people that belong to that role. In order to create roles go to "server settings", "roles", "create role".    
 <img src="img/config_emoji.png">  
 
 Select the category in which the support channel and the log channel will be placed (look at the first image of this file for clarification).  
@@ -49,6 +49,7 @@ Define the messages that will be sent in the support channel and the one that wi
 ```bash
 pip install discord.py
 pip install python-dotenv
+pip install regex
 ```
 
 ## Docker instance
