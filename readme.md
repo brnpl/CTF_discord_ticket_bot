@@ -37,13 +37,13 @@ DISCORD_TOKEN='<TOKEN_SAVED_FROM_BEFORE>'
 ### 3. Configure the bot messages
 Choose how many challenge categories you want. In this case there are 7 categories: crypto, web, network, reverse, binary, osint and hardware. Select one emoji for each category and edit them accordingly.  
 IMPORTANT: you need to have different roles for each category. In order to create roles go to "server settings", "roles", "create role". In this case, the server has 7 roles and each role is assigned to different people.  
-<img src="img/config_emoji.png" width="50%">  
+<img src="img/config_emoji.png">  
 
 Select the category in which the support channel and the log channel will be placed (look at the first image of this file for clarification).  
-<img src="img/config_category_channel.png" width="50%">  
+<img src="img/config_category_channel.png">  
 
 Define the messages that will be sent in the support channel and the one that will be sent when a new ticket is created.  
-<img src="img/config_messages.png" width="50%">  
+<img src="img/config_messages.png">  
 
 ## Dependencies
 ```bash
