@@ -1,5 +1,5 @@
 # CTF Discord Ticket Bot
-This bot will help you manage tickets during CTF events.
+This bot will help you manage tickets during CTF (Capture The Flag) events.
 
 # 1. How does it work?
 1\) The bot will send a message in the selected channel (in this case the channel is named "support" and it is placed under the "Support" category).  
