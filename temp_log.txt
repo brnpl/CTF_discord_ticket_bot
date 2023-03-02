@@ -1,0 +1,4 @@
+Ticket log crypto-brn:
+
+brn#5307: test message
+CTF Ticket Bot#3209: The ticket has been closed by brn. Sending the ticket log to the admins...
