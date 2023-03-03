@@ -118,6 +118,10 @@ async def on_reaction_add(reaction, user):
     # if the emoji is not in the selected ones
     if emoji not in MAP_EMOJIS_CATEGORY:
         return
+
+    # remove the added emoji (if the user who reacted is not the bot)
+    if user.id != client.user.id:
+        await reaction.remove(user)
     
     # get category based on the raised emoji. Be sure that exists a role in the server with the same name
     category = MAP_EMOJIS_CATEGORY[emoji]
@@ -151,7 +155,7 @@ async def on_reaction_add(reaction, user):
         
         # create the channel that will receive the log
         guild = client.guilds[0]
-        category = discord.utils.get(guild.categories, name=TICKET_CATEGORY_NAME)
+        ticket_category = discord.utils.get(guild.categories, name=TICKET_CATEGORY_NAME)
         log_channel = discord.utils.get(guild.text_channels, name=LOG_CHANNEL)
         if not log_channel:
             admin_permissions = {
