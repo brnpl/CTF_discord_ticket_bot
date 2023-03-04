@@ -1,5 +1,5 @@
 # CTF Discord Ticket Bot
-This bot will help you manage tickets during CTF (Capture The Flag) events.
+This bot will help you manage tickets during CTF (Capture The Flag) events. The discord server should have different roles corresponding to the available challenge categories. Each time that a ticket is requested, a new private channel will be created with the ticket owner and the support team for the selected category.  
 
 # 1. How does it work?
 1\) The bot will send a message in the selected channel (in this case the channel is named "support" and it is placed under the "Support" category).  
@@ -53,7 +53,7 @@ pip install regex
 ```
 
 ## Docker instance
-You can directly deploy the bot using a docker instance. You can either use the Docker file or the docker-compose.yaml.  
+You can directly deploy the bot using a docker instance. Be sure to configure your bot before using the Docker instances. You can either use the Docker file or the docker-compose.yaml.  
 ```bash
 # Dockerfile
 docker build -t <name_image> .
